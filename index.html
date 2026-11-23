@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Расчёты ЧС и промбезопасности — неофициальная витрина программ «Титан-Оптима»</title>
+<meta name="description" content="Подберите программу для расчётов ЧС и промышленной безопасности за 2 минуты: волна прорыва, взрывоопасность блоков, заражение АХОВ. Неофициальная витрина-пилот; все права на ПО — ООО НПП «Титан-Оптима».">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <a class="brand" href="index.html">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Расчёты&nbsp;ЧС <span class="brand-note">/ витрина-пилот</span></span>
+    </a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="quiz.html">Подобрать программу</a>
+      <a href="volna.html">Волна</a>
+      <a href="potencial.html">Потенциал</a>
+      <a href="about.html">О пилоте</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Программы для расчётов последствий аварий — <span class="accent">под ваша задача</span></h1>
+        <p class="lead">Волна прорыва гидроузла, взрывоопасность технологических блоков, заражение АХОВ, планы ЛАРН и ПЛАС. Подберите нужную программу и получите список исходных данных для расчёта — за пару минут, без звонков.</p>
+        <div class="cta-row">
+          <a class="btn btn-signal" href="quiz.html">Подобрать программу</a>
+          <a class="btn btn-quiet" href="#programs">Сразу к программам</a>
+        </div>
+        <p class="micro">Неофициальная витрина. Права на программы — ООО&nbsp;НПП&nbsp;«Титан-Оптима», <a href="https://titan-optima.com" target="_blank" rel="noopener">titan-optima.com</a></p>
+      </div>
+      <figure class="hero-fig" aria-labelledby="hero-fig-caption">
+        <svg viewBox="0 0 420 300" role="img" aria-label="Схема: гидроузел и расходящиеся изолинии волны прорыва">
+          <!-- чертёжная сетка -->
+          <g class="grid" aria-hidden="true">
+            <path d="M0 30 H420 M0 60 H420 M0 90 H420 M0 120 H420 M0 150 H420 M0 180 H420 M0 210 H420 M0 240 H420 M0 270 H420"/>
+            <path d="M60 0 V300 M120 0 V300 M180 0 V300 M240 0 V300 M300 0 V300 M360 0 V300"/>
+          </g>
+          <!-- верхний бьеф: вода за плотиной -->
+          <path class="water" d="M0 0 H150 V90 Q120 104 96 118 L0 118 Z"/>
+          <!-- плотина -->
+          <path class="dam" d="M150 0 H186 V150 L150 178 Z"/>
+          <!-- terreno -->
+          <path class="ground" d="M186 150 L150 178 L0 300 H420 V212 Q330 236 240 252 Q210 258 186 260 Z" transform="translate(0,0)"/>
+          <!-- изолинии волны прорыва -->
+          <g class="iso" aria-hidden="true">
+            <path class="iso-line" d="M186 160 Q240 172 300 194 T420 240"/>
+            <path class="iso-line" d="M186 168 Q246 186 306 214 T420 266"/>
+            <path class="iso-line" d="M186 176 Q252 200 312 234 T420 292"/>
+          </g>
+          <!-- подписи изолиний -->
+          <g class="iso-label" aria-hidden="true">
+            <text x="300" y="188">t = 0,5 ч</text>
+            <text x="316" y="212">t = 1 ч</text>
+            <text x="330" y="243">t = 2 ч</text>
+          </g>
+        </svg>
+        <figcaption id="hero-fig-caption">Расчётная схема к программе «Волна»: волна прорыва гидроузла, изохронусы добегания</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" id="programs">
+      <h2>Программы</h2>
+      <div class="table-list" role="list">
+        <a class="row-primary" role="listitem" href="volna.html">
+          <span class="row-name">Волна</span>
+          <span class="row-desc">Параметры волны прорыва гидротехнического сооружения, зоны затопления, время добегания</span>
+          <span class="row-tag">гидродинамика</span>
+        </a>
+        <a class="row-primary" role="listitem" href="potencial.html">
+          <span class="row-name">Потенциал</span>
+          <span class="row-desc">Взрывоопасность технологических блоков: энергетические показатели, категории, радиусы зон разрушения</span>
+          <span class="row-tag">взрыв</span>
+        </a>
+        <div class="row-more" role="listitem">
+          <p>Также в линейке «Титан-Оптимы»: <strong>ТоксиГО</strong> и <strong>АХОВ</strong> (химически опасные объекты), <strong>Взрыв</strong> и <strong>Дефлаграция</strong> (взрывоопасные объекты), <strong>Факел</strong> и <strong>Магистраль</strong> (нефтепродуктообеспечение и газотранспорт), <strong>Графопостроитель</strong> (F/N- и F/G-диаграммы риска). Описания и демо-версии — на официальном сайте.</p>
+          <a class="btn btn-quiet" href="https://titan-optima.com/programm/index.htm" target="_blank" rel="noopener">Все программы на titan-optima.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Почему этим занимаюсь</h2>
+      <p>Программами «Титан-Оптимы» пользоваться умеют тысячи инженеров: в активе компании — проектные институты, экспертные и проектные организации по всей стране, единая научно-методическая база и демо-версии. Но новичку сложно понять, <em>с какой программы начать</em> и <em>какие исходные данные готовить</em>. Эта витрина — попытка закрыть именно этот разрыв: квиз подбирает программу под задачу, а интерактивные чек-листы собирают список исходных данных под ваш объект.</p>
+      <p><a href="about.html">Подробнее о пилоте и дисклеймер</a></p>
+    </section>
+
+  </main>
+
+  <footer class="stamp" role="contentinfo">
+    <div class="stamp-cell stamp-title">
+      <span class="stamp-name">Неофициальная витрина-пилот</span>
+      <span class="stamp-sub">не является сайтом ООО НПП «Титан-Оптима»</span>
+    </div>
+    <div class="stamp-cell">
+      <span class="stamp-k">Правообладатель ПО</span>
+      <a href="https://titan-optima.com" target="_blank" rel="noopener">ООО НПП «Титан-Оптима» · titan-optima.com</a>
+    </div>
+    <div class="stamp-cell">
+      <span class="stamp-k">Инициатор пилота</span>
+      <a href="about.html">Виктор Искалин</a>
+    </div>
+  </footer>
+
+</div>
+<!-- Yandex.Metrika counter — подключить после получения номера счётчика -->
+</body>
+</html>
