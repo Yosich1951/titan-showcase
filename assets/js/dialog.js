@@ -122,7 +122,7 @@
         if (dn) html += "<p>" + dn + "</p>";
       }
       if (m.bundles) {
-        var bl = m.bundles.filter(condOk);
+        var bl = m.bundles.filter(function (x) { return condOk(x.cond); });
         if (bl.length) {
           html += '<p class="memo-bundle"><strong>Работает в связке:</strong> ' +
             bl.map(function (b) { return b.t; }).join("; ") + ".</p>";
@@ -131,7 +131,7 @@
     }
 
     if (m.recs) {
-      var recs = m.recs.filter(condOk);
+      var recs = m.recs.filter(function (x) { return condOk(x.cond); });
       html += '<p class="quiz-verdict">С чего начать</p>';
       html += '<ul class="memo-recs">';
       recs.forEach(function (r) {
@@ -143,7 +143,7 @@
     }
 
     if (m.notes) {
-      m.notes.filter(condOk).forEach(function (n) {
+      m.notes.filter(function (x) { return condOk(x.cond); }).forEach(function (n) {
         html += '<p class="memo-noteline">' + n.t + "</p>";
       });
     }
@@ -175,7 +175,7 @@
     }
 
     if (m.gaps) {
-      var gaps = m.gaps.filter(condOk);
+      var gaps = m.gaps.filter(function (x) { return condOk(x.cond); });
       if (gaps.length) {
         html += '<div class="memo-sec"><h4>Чего не хватает и где взять</h4><ul class="memo-gaps">';
         gaps.forEach(function (g) { html += "<li>" + g.t + "</li>"; });
@@ -242,11 +242,11 @@
     }
     if (m.recs) {
       lines.push("С чего начать:");
-      m.recs.filter(condOk).forEach(function (r) { lines.push("- " + r.name + " — " + r.text); });
+      m.recs.filter(function (x) { return condOk(x.cond); }).forEach(function (r) { lines.push("- " + r.name + " — " + r.text); });
       lines.push("");
     }
     if (m.notes) {
-      m.notes.filter(condOk).forEach(function (n) { lines.push(n.t); });
+      m.notes.filter(function (x) { return condOk(x.cond); }).forEach(function (n) { lines.push(n.t); });
       lines.push("");
     }
     if (m.groups) {
@@ -260,7 +260,7 @@
       });
     }
     if (m.gaps) {
-      var gaps = m.gaps.filter(condOk);
+      var gaps = m.gaps.filter(function (x) { return condOk(x.cond); });
       if (gaps.length) {
         lines.push("Чего не хватает и где взять:");
         gaps.forEach(function (g) { lines.push("- " + g.t); });
