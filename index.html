@@ -39,32 +39,39 @@
         <p class="micro">Неофициальная витрина. Права на программы — ООО&nbsp;НПП&nbsp;«Титан-Оптима», <a href="https://titan-optima.com" target="_blank" rel="noopener">titan-optima.com</a></p>
       </div>
       <figure class="hero-fig" aria-labelledby="hero-fig-caption">
-        <svg viewBox="0 0 420 300" role="img" aria-label="Схема: гидроузел и расходящиеся изолинии волны прорыва">
+        <svg viewBox="0 0 440 300" role="img" aria-label="Продольный профиль волны прорыва: гидроузел, водохранилище с НПУ, два расчётных створа с глубиной и временем добегания">
           <!-- чертёжная сетка -->
           <g class="grid" aria-hidden="true">
-            <path d="M0 30 H420 M0 60 H420 M0 90 H420 M0 120 H420 M0 150 H420 M0 180 H420 M0 210 H420 M0 240 H420 M0 270 H420"/>
+            <path d="M0 30 H440 M0 60 H440 M0 90 H440 M0 120 H440 M0 150 H440 M0 180 H440 M0 210 H440 M0 240 H440 M0 270 H440"/>
             <path d="M60 0 V300 M120 0 V300 M180 0 V300 M240 0 V300 M300 0 V300 M360 0 V300"/>
           </g>
-          <!-- верхний бьеф: вода за плотиной -->
-          <path class="water" d="M0 0 H150 V90 Q120 104 96 118 L0 118 Z"/>
-          <!-- плотина -->
-          <path class="dam" d="M150 0 H186 V150 L150 178 Z"/>
-          <!-- terreno -->
-          <path class="ground" d="M186 150 L150 178 L0 300 H420 V212 Q330 236 240 252 Q210 258 186 260 Z" transform="translate(0,0)"/>
-          <!-- изолинии волны прорыва -->
-          <g class="iso" aria-hidden="true">
-            <path class="iso-line" d="M186 160 Q240 172 300 194 T420 240"/>
-            <path class="iso-line" d="M186 168 Q246 186 306 214 T420 266"/>
-            <path class="iso-line" d="M186 176 Q252 200 312 234 T420 292"/>
+          <!-- верхний бьеф: водохранилище -->
+          <path class="water" d="M0 90 H150 V118 L0 118 Z"/>
+          <!-- НПУ -->
+          <path class="iso-line" d="M22 90 H148"/>
+          <g class="iso-label">
+            <text x="10" y="86">НПУ</text>
           </g>
-          <!-- подписи изолиний -->
-          <g class="iso-label" aria-hidden="true">
-            <text x="300" y="188">t = 0,5 ч</text>
-            <text x="316" y="212">t = 1 ч</text>
-            <text x="330" y="243">t = 2 ч</text>
+          <!-- грунтовая плотина -->
+          <path class="dam" d="M150 76 H170 L182 126 H138 Z"/>
+          <g class="iso-label">
+            <text x="160" y="66" text-anchor="middle">гидроузел</text>
+          </g>
+          <!-- дно нижнего бьефа -->
+          <path class="ground" d="M182 108 C 240 132, 320 162, 440 180"/>
+          <!-- волна прорыва: слой воды над дном -->
+          <path class="water" d="M182 92 C 240 118, 320 150, 440 170 L440 180 C 320 164, 240 134, 182 108 Z"/>
+          <!-- расчётные створы -->
+          <path class="iso-line" d="M258 78 V140"/>
+          <path class="iso-line" d="M352 78 V166"/>
+          <g class="iso-label">
+            <text x="258" y="72" text-anchor="middle">створ 1 · 12 км</text>
+            <text x="258" y="158" text-anchor="middle">h = 3,9 м · t = 0,8 ч</text>
+            <text x="352" y="72" text-anchor="middle">створ 2 · 34 км</text>
+            <text x="352" y="186" text-anchor="middle">h = 2,6 м · t = 2,4 ч</text>
           </g>
         </svg>
-        <figcaption id="hero-fig-caption">Расчётная схема к программе «Волна»: волна прорыва гидроузла, изохронусы добегания</figcaption>
+        <figcaption id="hero-fig-caption">Продольный профиль волны прорыва: глубина и время добегания по расчётным створам — схема к программе «Волна»</figcaption>
       </figure>
     </section>
 
