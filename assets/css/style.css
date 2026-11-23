@@ -435,6 +435,124 @@ a:hover { color: var(--petrol-deep); }
   white-space: nowrap;
 }
 
+/* --- диалог (Этап 2.1) --- */
+
+.dlg-react {
+  border-left: 3px solid var(--petrol);
+  background: #E9EDE8;
+  padding: 14px 18px;
+  margin-top: 18px;
+  max-width: 640px;
+}
+.dlg-react p { margin: 0 0 12px; }
+.dlg-react .btn { padding: 8px 16px; font-size: 0.9em; }
+
+.quiz-opt.dlg-chosen {
+  border-left: 3px solid var(--petrol);
+  color: var(--petrol-deep);
+  font-weight: 500;
+  cursor: default;
+}
+.quiz-opt:disabled { opacity: 0.55; }
+.quiz-opt.dlg-chosen:disabled { opacity: 1; }
+
+/* --- рабочая памятка --- */
+
+.memo {
+  border: 1px solid var(--ink);
+  outline: 1px solid var(--line-soft);
+  outline-offset: 4px;
+  padding: 28px 32px;
+  margin: 6px 0 10px;
+}
+
+.memo-bundle {
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+  padding: 10px 0;
+  max-width: 46em;
+}
+
+.memo-recs { max-width: 46em; padding-left: 20px; }
+.memo-recs li { margin-bottom: 10px; }
+.memo-noteline { max-width: 44em; }
+
+.memo-gnum {
+  font-family: var(--font-mono);
+  color: var(--petrol-deep);
+  margin-right: 4px;
+}
+.memo-gwhy {
+  font-size: 0.88em;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  max-width: 44em;
+}
+
+.memo-sec { margin-top: 26px; max-width: 48em; }
+.memo-sec h4 {
+  font-size: 0.82em;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--petrol-deep);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  margin: 0 0 12px;
+}
+.memo-gaps li, .memo-norms li { margin-bottom: 8px; color: var(--ink-soft); }
+.memo-gaps { padding-left: 20px; }
+.memo-norms { padding-left: 20px; }
+.memo-seq { padding-left: 22px; }
+.memo-seq li { margin-bottom: 6px; }
+
+.memo-effort {
+  font-size: 0.9em;
+  border-left: 3px solid var(--signal);
+  padding-left: 14px;
+  margin-top: 26px;
+  max-width: 44em;
+}
+
+.memo-actions { margin-top: 26px; }
+
+/* --- «крючки» на страницах программ --- */
+
+.hook {
+  border: 1px dashed var(--line);
+  padding: 16px 20px;
+  max-width: 48em;
+}
+
+.mini-ex { max-width: 640px; overflow-x: auto; }
+.mini-ex table {
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  margin-top: 10px;
+}
+.mini-ex th, .mini-ex td {
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+.mini-ex th { background: #E9EDE8; font-weight: 500; }
+
+/* --- печать памятки --- */
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .sheet { max-width: 100%; margin: 0; border: 1px solid var(--ink); outline: none; padding: 0 24px; }
+  .masthead, .prog-head, .hero, .section:not(.dialog-host), .quiz-privacy { display: none !important; }
+  .memo { border: none; outline: none; padding: 0; }
+  .memo-actions, .micro, .quiz-back { display: none !important; }
+  .stamp { margin: 24px 0 8px; page-break-inside: avoid; }
+  .idata-item input[type="checkbox"] { width: 12px; height: 12px; }
+  a { color: var(--ink); text-decoration: none; }
+}
+
 /* --- адаптив --- */
 
 @media (max-width: 860px) {
